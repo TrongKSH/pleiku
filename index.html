@@ -54,6 +54,11 @@ section{padding:1.5rem 1.5rem 0}
 .place{background:var(--soft);border-radius:14px;padding:.85rem 1rem;display:flex;flex-direction:column;gap:.2rem}
 .place b{font-size:1.25rem}
 .photo{width:100%;height:auto;max-height:260px;object-fit:cover;border-radius:14px;display:block}
+.flight-link{text-decoration:none;color:var(--ink);display:block}
+.btn.ticket{background:var(--ink);color:#fff;gap:.6rem;margin-top:.3rem}
+.ticket-img{display:block;border:2px solid var(--line);border-radius:14px;overflow:hidden;margin-bottom:.4rem}
+.ticket-img img{width:100%;height:auto;display:block}
+.cap{font-size:1.1rem;font-weight:700;margin:1.1rem 0 .5rem}
 .pending{color:var(--muted);font-style:italic}
 .actions{padding:1.5rem;display:flex;flex-direction:column;gap:.9rem;margin-top:auto}
 .btn{text-decoration:none;border-radius:16px;min-height:64px;display:flex;align-items:center;justify-content:center;text-align:center;padding:.5rem 1rem;font-size:1.35rem;font-weight:700}
@@ -79,7 +84,7 @@ footer{padding:1.5rem;border-top:2px solid var(--line);font-size:1rem;color:var(
 <body>
 <div class="wrap" id="app" aria-live="polite"></div>
 <noscript><p style="padding:1.5rem">Trang cần bật JavaScript để hiển thị.</p></noscript>
-<script id="trip" type="application/json">{"days": [{"label": "Thứ 6", "date": "27/11/2026", "summary": "Bay ra Pleiku, tối tiệc nhóm họ", "items": [{"time": "12:00", "title": "Có mặt sân bay Tân Sơn Nhất, nhà ga T3", "detail": "Làm thủ tục và gửi hành lý", "place": ""}, {"time": "14:24", "title": "Máy bay cất cánh", "detail": "Chuyến VN1422 Sài Gòn – Pleiku", "place": ""}, {"time": "16:00", "title": "Đáp sân bay Pleiku", "detail": "Có xe đưa đón về khách sạn nhận phòng và nghỉ ngơi", "place": "Khách sạn Tre Xanh"}, {"time": "17:00–18:00", "title": "Qua nhà gái dùng tiệc nhóm họ", "detail": "", "place": "Nhà gái"}]}, {"label": "Thứ 7", "date": "28/11/2026", "summary": "Lễ vu quy, tiệc cưới", "items": [{"time": "05:00–07:00", "title": "Trang điểm", "detail": "Bên make up qua trang điểm cho mẹ và các cô bác nhà trai", "place": ""}, {"time": "08:00", "title": "Qua nhà gái làm lễ vu quy", "detail": "Lễ khoảng 2 tiếng – 2 tiếng 30", "place": "Nhà gái"}, {"time": "11:00", "title": "Tiệc cưới ở nhà hàng", "detail": "Sảnh Queen, tầng 1", "place": "Nhà hàng Century"}, {"time": "Chiều", "title": "Về khách sạn nghỉ ngơi", "detail": "Cả nhà sinh hoạt tự do", "place": "Khách sạn Tre Xanh"}, {"time": "17:00–18:00", "title": "Tiệc thân mật hai gia đình", "detail": "Có xe đưa cả nhà vào nhà vườn", "place": "Nhà vườn"}]}, {"label": "Chủ nhật", "date": "29/11/2026", "summary": "Trả phòng, bay về Sài Gòn", "items": [{"time": "Buổi sáng", "title": "Thu dọn hành lý, trả phòng", "detail": "Giờ trả phòng: cập nhật sau", "place": "Khách sạn Tre Xanh"}, {"time": "cập nhật sau", "title": "Xe đưa cả nhà ra sân bay Pleiku", "detail": "", "place": ""}, {"time": "16:10", "title": "Máy bay cất cánh về Sài Gòn", "detail": "Chuyến VN1423 Pleiku – Tân Sơn Nhất (nhà ga T3)", "place": ""}]}], "flights": [{"date": "27/11/2026", "code": "VN1422", "from": "Tân Sơn Nhất (nhà ga T3)", "to": "Pleiku", "depart": "14:24", "checkin": "12:00"}, {"date": "29/11/2026", "code": "VN1423", "from": "Pleiku", "to": "Tân Sơn Nhất (nhà ga T3)", "depart": "16:10", "checkin": "14:00"}], "places": {"Khách sạn Tre Xanh": {"address": "18 Lê Lai, Phường Tây Sơn, Thành phố Pleiku, Gia Lai", "note": "Đối diện Chợ đêm Pleiku"}, "Nhà gái": {"address": "64 Cù Chính Lan, Phường Diên Hồng", "note": ""}, "Nhà hàng Century": {"address": "170 đường Wừu, phường Pleiku, Gia Lai", "note": "Sảnh Queen, tầng 1"}, "Nhà vườn": {"address": "124 Trần Xuân Soạn, Phường Diên Hồng", "note": ""}}, "contacts": [{"name": "Kim Trọng", "role": "Người lo chung cả chuyến", "phone": "0903822904"}, {"name": "Kim Thuận", "role": "Người lo chung cả chuyến", "phone": "0969270285"}, {"name": "Tài xế 1", "role": "Tài xế", "phone": ""}, {"name": "Tài xế 2", "role": "Tài xế", "phone": ""}], "packing": [{"item": "CCCD / giấy tờ tùy thân", "note": "Bắt buộc để lên máy bay"}, {"item": "Áo khoác", "note": "Pleiku 19–26°C, có gió"}, {"item": "Quần áo dự lễ, dự tiệc", "note": "Lễ vu quy và tiệc cưới Thứ 7"}, {"item": "Giày dép đi lại thoải mái", "note": ""}, {"item": "Thuốc uống hằng ngày", "note": "Mang đủ cho 3 ngày"}, {"item": "Sạc điện thoại", "note": ""}, {"item": "Kính lão / kính mát", "note": ""}], "title": "Pleiku 27–29/11/2026", "start": "27/11/2026", "end": "29/11/2026", "summaries": {"Thứ 6": "Bay ra Pleiku, tối tiệc nhóm họ", "Thứ 7": "Lễ vu quy, tiệc cưới", "Chủ nhật": "Trả phòng, bay về Sài Gòn"}, "weather": {"temp": "19–26°C", "note": "Gió sẽ làm cảm thấy lạnh hơn xíu, nhớ mang áo khoác mỏng"}, "photos": {"Khách sạn Tre Xanh": "assets/hotel.jpg", "Nhà hàng Century": "assets/restaurant.jpg"}, "updated": "11:37, 13/11/2026"}</script>
+<script id="trip" type="application/json">{"days": [{"label": "Thứ 6", "date": "27/11/2026", "summary": "Bay ra Pleiku, tối tiệc nhóm họ", "items": [{"time": "12:00", "title": "Có mặt sân bay Tân Sơn Nhất, nhà ga T3", "detail": "Làm thủ tục và gửi hành lý", "place": ""}, {"time": "14:24", "title": "Máy bay cất cánh", "detail": "Chuyến VN1422 Sài Gòn – Pleiku", "place": ""}, {"time": "16:00", "title": "Đáp sân bay Pleiku", "detail": "Có xe đưa đón về khách sạn nhận phòng và nghỉ ngơi", "place": "Khách sạn Tre Xanh"}, {"time": "17:00–18:00", "title": "Qua nhà gái dùng tiệc nhóm họ", "detail": "", "place": "Nhà gái"}]}, {"label": "Thứ 7", "date": "28/11/2026", "summary": "Lễ vu quy, tiệc cưới", "items": [{"time": "05:00–07:00", "title": "Trang điểm", "detail": "Bên make up qua trang điểm cho mẹ và các cô bác nhà trai", "place": ""}, {"time": "08:00", "title": "Qua nhà gái làm lễ vu quy", "detail": "Lễ khoảng 2 tiếng – 2 tiếng 30", "place": "Nhà gái"}, {"time": "11:00", "title": "Tiệc cưới ở nhà hàng", "detail": "Sảnh Queen, tầng 1", "place": "Nhà hàng Century"}, {"time": "Chiều", "title": "Về khách sạn nghỉ ngơi", "detail": "Cả nhà sinh hoạt tự do", "place": "Khách sạn Tre Xanh"}, {"time": "17:00–18:00", "title": "Tiệc thân mật hai gia đình", "detail": "Có xe đưa cả nhà vào nhà vườn", "place": "Nhà vườn"}]}, {"label": "Chủ nhật", "date": "29/11/2026", "summary": "Trả phòng, bay về Sài Gòn", "items": [{"time": "Buổi sáng", "title": "Thu dọn hành lý, trả phòng", "detail": "Giờ trả phòng: cập nhật sau", "place": "Khách sạn Tre Xanh"}, {"time": "cập nhật sau", "title": "Xe đưa cả nhà ra sân bay Pleiku", "detail": "", "place": ""}, {"time": "16:10", "title": "Máy bay cất cánh về Sài Gòn", "detail": "Chuyến VN1423 Pleiku – Tân Sơn Nhất (nhà ga T3)", "place": ""}]}], "flights": [{"date": "27/11/2026", "code": "VN1422", "from": "Tân Sơn Nhất (nhà ga T3)", "to": "Pleiku", "depart": "14:24", "checkin": "12:00"}, {"date": "29/11/2026", "code": "VN1423", "from": "Pleiku", "to": "Tân Sơn Nhất (nhà ga T3)", "depart": "16:10", "checkin": "14:00"}], "places": {"Khách sạn Tre Xanh": {"address": "18 Lê Lai, Phường Tây Sơn, Thành phố Pleiku, Gia Lai", "note": "Đối diện Chợ đêm Pleiku"}, "Nhà gái": {"address": "64 Cù Chính Lan, Phường Diên Hồng", "note": ""}, "Nhà hàng Century": {"address": "170 đường Wừu, phường Pleiku, Gia Lai", "note": "Sảnh Queen, tầng 1"}, "Nhà vườn": {"address": "124 Trần Xuân Soạn, Phường Diên Hồng", "note": ""}}, "contacts": [{"name": "Kim Trọng", "role": "Người lo chung cả chuyến", "phone": "0903822904"}, {"name": "Kim Thuận", "role": "Người lo chung cả chuyến", "phone": "0969270285"}, {"name": "Tài xế 1", "role": "Tài xế", "phone": ""}, {"name": "Tài xế 2", "role": "Tài xế", "phone": ""}], "packing": [{"item": "CCCD / giấy tờ tùy thân", "note": "Bắt buộc để lên máy bay"}, {"item": "Áo khoác", "note": "Pleiku 19–26°C, có gió"}, {"item": "Quần áo dự lễ, dự tiệc", "note": "Lễ vu quy và tiệc cưới Thứ 7"}, {"item": "Giày dép đi lại thoải mái", "note": ""}, {"item": "Thuốc uống hằng ngày", "note": "Mang đủ cho 3 ngày"}, {"item": "Sạc điện thoại", "note": ""}, {"item": "Kính lão / kính mát", "note": ""}], "title": "Pleiku 27–29/11/2026", "start": "27/11/2026", "end": "29/11/2026", "summaries": {"Thứ 6": "Bay ra Pleiku, tối tiệc nhóm họ", "Thứ 7": "Lễ vu quy, tiệc cưới", "Chủ nhật": "Trả phòng, bay về Sài Gòn"}, "weather": {"temp": "19–26°C", "note": "Gió sẽ làm cảm thấy lạnh hơn xíu, nhớ mang áo khoác mỏng"}, "photos": {"Khách sạn Tre Xanh": "assets/hotel.jpg", "Nhà hàng Century": "assets/restaurant.jpg"}, "tickets": {}, "updated": "13:02, 13/11/2026"}</script>
 <script>
 (function(){
   var T = JSON.parse(document.getElementById('trip').textContent);
@@ -99,11 +104,11 @@ footer{padding:1.5rem;border-top:2px solid var(--line);font-size:1rem;color:var(
       else if (k.slice(0,2) === 'on') el.addEventListener(k.slice(2), v);
       else el.setAttribute(k, v);
     }
-    for (var i = 2; i < arguments.length; i++){
-      var c = arguments[i]; if (c == null || c === false) continue;
-      if (Array.isArray(c)) c.forEach(function(x){ if (x != null && x !== false) el.appendChild(typeof x === 'string' ? document.createTextNode(x) : x); });
-      else el.appendChild(typeof c === 'string' ? document.createTextNode(c) : c);
-    }
+    (function add(c){
+      if (c == null || c === false) return;
+      if (Array.isArray(c)) return c.forEach(add);
+      el.appendChild(typeof c === 'string' ? document.createTextNode(c) : c);
+    })([].slice.call(arguments, 2));
     return el;
   }
   // chữ có "cập nhật sau" -> hiện "Sẽ cập nhật sau" màu xám
@@ -129,7 +134,8 @@ footer{padding:1.5rem;border-top:2px solid var(--line);font-size:1rem;color:var(
     plane: '<path d="M2.5 13.5l19-7-5 15-3.5-6.5z"/><path d="M13 15l3.5-5"/>',
     list: '<rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M8.5 12l2 2 4-4"/>',
     phone: '<path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/>',
-    tick: '<path d="M5 12.5l4.5 4.5L19 7.5"/>'
+    tick: '<path d="M5 12.5l4.5 4.5L19 7.5"/>',
+    ticket: '<path d="M3 8a2 2 0 0 0 0 4v4a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-4a2 2 0 0 1 0-4V5a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1z"/><path d="M14 4v13" stroke-dasharray="2 2"/>'
   };
   function parseDate(s){ var p = s.split('/'); return new Date(+p[2], +p[1]-1, +p[0]); }
   function todayVN(){
@@ -222,15 +228,43 @@ footer{padding:1.5rem;border-top:2px solid var(--line);font-size:1rem;color:var(
   }
 
   // ---------- trang ngày ----------
+  function ticketsOf(f){ return (T.tickets || {})[f.date.split('/')[0]] || []; }
   function flightCard(f){
-    return h('section', null, h('div', {class:'flight'},
+    var tk = ticketsOf(f);
+    var body = [
       h('div', {class:'flight-h'}, icon(I.plane, 30), 'Chuyến bay'),
       h('dl', {class:'kv'},
         h('dt', null, 'Số hiệu'), h('dd', {class:'big'}, f.code),
         h('dt', null, 'Từ'), h('dd', null, f.from),
         h('dt', null, 'Đến'), h('dd', null, f.to),
         h('dt', null, 'Có mặt sân bay'), txt(f.checkin, 'dd', 'big'),
-        h('dt', null, 'Giờ bay'), txt(f.depart, 'dd', 'big'))));
+        h('dt', null, 'Giờ bay'), txt(f.depart, 'dd', 'big')),
+      tk.length ? h('span', {class:'btn ticket'}, icon(I.ticket, 26, '#fff'), 'Xem vé máy bay (' + tk.length + ' tấm)') : null
+    ];
+    if (!tk.length) return h('section', null, h('div', {class:'flight'}, body));
+    return h('section', null, h('a', {class:'flight-link', href:'#ve-' + f.date.split('/')[0], 'aria-label':'Xem vé chuyến ' + f.code},
+      h('div', {class:'flight'}, body)));
+  }
+  function ticketPage(f){
+    var tk = ticketsOf(f);
+    var day = T.days.find(function(d){ return d.date === f.date; });
+    return [
+      h('header', {class:'top'},
+        h('div', {class:'top-row'}, h('a', {class:'back', href: day ? '#' + dayId(day) : '#trang-chu'}, icon(I.back, 26, '#fff'), day ? 'Quay lại ' + day.label : 'Trang chủ'), bigBtn()),
+        h('h1', null, 'Vé chuyến ' + f.code),
+        h('p', {class:'sub'}, f.from + ' → ' + f.to),
+        h('p', {class:'sub'}, 'Ngày ' + f.date + ' · Có mặt ' + f.checkin + ' · Bay ' + f.depart)),
+      h('section', null,
+        h('div', {class:'note'}, 'Đưa vé này và CCCD cho nhân viên quầy làm thủ tục. Bấm vào ảnh để phóng to.'),
+        tk.map(function(src, n){
+          return [h('p', {class:'cap'}, 'Vé ' + (n + 1) + ' / ' + tk.length),
+            h('a', {class:'ticket-img', href: src, target:'_blank', rel:'noopener'},
+              h('img', {src: src, alt: 'Vé ' + (n + 1) + ' chuyến ' + f.code}))];
+        })),
+      h('div', {class:'actions'},
+        day ? h('a', {class:'btn primary', href:'#' + dayId(day)}, 'Quay lại lịch ' + day.label) : null,
+        homeBtn())
+    ];
   }
   function dayPage(i){
     var d = T.days[i];
@@ -304,6 +338,8 @@ footer{padding:1.5rem;border-top:2px solid var(--line);font-size:1rem;color:var(
     var view, title = T.title;
     var di = T.days.findIndex(function(d){ return dayId(d) === id; });
     if (di >= 0){ view = dayPage(di); title = T.days[di].label + ' – ' + shortDate(T.days[di]); }
+    else if (id.indexOf('ve-') === 0 && T.flights.some(function(f){ return 've-' + f.date.split('/')[0] === id; })){
+      var fl = T.flights.find(function(f){ return 've-' + f.date.split('/')[0] === id; }); view = ticketPage(fl); title = 'Vé ' + fl.code; }
     else if (id === 'do-can-mang'){ view = packing(); title = 'Đồ cần mang'; }
     else if (id === 'goi-dien'){ view = contacts(); title = 'Gọi điện'; }
     else view = home();
