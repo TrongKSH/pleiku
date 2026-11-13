@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pleiku 27–29/11/2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--red:#8E1B19;--red-dark:#6E1412;--ink:#1F1A17;--muted:#5C524D;--line:#E4D9D4;--soft:#F6F1EE;--warn:#FFF4E0;--green:#2E6B3A;--green-soft:#EEF6EF}
+html{font-size:90%;-webkit-text-size-adjust:100%}
+html.big{font-size:108%}
+*{box-sizing:border-box}
+body{margin:0;background:#fff;color:var(--ink);font-family:'Be Vietnam Pro',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;font-size:1.25rem;line-height:1.5}
+.wrap{max-width:560px;margin:0 auto;min-height:100vh;display:flex;flex-direction:column}
+a{color:var(--red)}
+header.top{background:var(--red);color:#fff;padding:1.25rem 1.5rem 1.6rem;display:flex;flex-direction:column;gap:.75rem}
+.top-row{display:flex;justify-content:space-between;align-items:center;gap:.75rem;flex-wrap:wrap}
+.kicker{font-size:1.1rem;font-weight:600;letter-spacing:.03em}
+h1{margin:0;font-size:2.1rem;line-height:1.2;font-weight:700}
+h2{margin:0 0 .9rem;font-size:1.6rem;line-height:1.3;font-weight:700}
+.sub{margin:0;font-size:1.25rem}
+.btn-a{min-height:48px;padding:0 1rem;border-radius:12px;border:2px solid #fff;background:transparent;color:#fff;font:inherit;font-size:1.1rem;font-weight:700;cursor:pointer}
+.btn-a[aria-pressed="true"]{background:#fff;color:var(--red)}
+.back{color:#fff;text-decoration:none;font-weight:600;min-height:48px;display:inline-flex;align-items:center;gap:.4rem}
+.count{margin-top:.4rem;background:#fff;color:var(--red);border-radius:16px;padding:1rem 1.25rem;display:flex;align-items:baseline;gap:.6rem;flex-wrap:wrap;font-weight:600}
+.count b{font-size:2.75rem;line-height:1}
+section{padding:1.5rem 1.5rem 0}
+.card{border:2px solid var(--line);border-radius:18px;padding:1.2rem;display:flex;flex-direction:column;gap:.9rem}
+.note{background:var(--warn);border-radius:12px;padding:.7rem 1rem;font-size:1.15rem}
+.small{font-size:1rem;color:var(--muted)}
+.wx-row{background:var(--soft);border-radius:14px;padding:.85rem 1rem;display:flex;justify-content:space-between;align-items:center;gap:.75rem}
+.wx-temp{font-size:1.75rem;font-weight:700;white-space:nowrap}
+.daybtn{text-decoration:none;color:#fff;background:var(--red);border-radius:18px;padding:1.1rem 1.3rem;min-height:84px;display:flex;justify-content:space-between;align-items:center;gap:.75rem;margin-bottom:.9rem}
+.daybtn:hover,.daybtn:focus-visible{background:var(--red-dark)}
+.daybtn .t{display:block;font-size:1.6rem;font-weight:700;line-height:1.25}
+.daybtn .d{display:block;font-size:1.1rem}
+.today-tag{display:inline-block;background:#fff;color:var(--red);border-radius:8px;padding:0 .5rem;font-size:1rem;font-weight:700;margin-left:.4rem;vertical-align:middle}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.9rem}
+.tile{text-decoration:none;color:var(--ink);border:2px solid var(--ink);border-radius:18px;padding:1.1rem .8rem;min-height:120px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.6rem;text-align:center;font-size:1.35rem;font-weight:700}
+.tile:hover,.tile:focus-visible{background:var(--soft)}
+.flight{border:3px solid var(--ink);border-radius:18px;padding:1.1rem 1.25rem;display:flex;flex-direction:column;gap:.6rem}
+.flight-h{display:flex;align-items:center;gap:.6rem;font-size:1.35rem;font-weight:700}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:.35rem 1rem;align-items:baseline}
+.kv dt{color:var(--muted)}
+.kv dd{margin:0;font-weight:700}
+.kv dd.big{font-size:1.5rem}
+.tl{list-style:none;margin:0;padding:0}
+.tl li{border-left:4px solid var(--line);margin-left:.6rem;padding:0 0 1.6rem 1.25rem;display:flex;flex-direction:column;gap:.45rem}
+.tl li:last-child{border-left-color:var(--red);padding-bottom:.4rem}
+.tl .time{font-size:1.6rem;font-weight:700;color:var(--red);line-height:1.25}
+.tl .what{font-size:1.3rem;font-weight:600}
+.place{background:var(--soft);border-radius:14px;padding:.85rem 1rem;display:flex;flex-direction:column;gap:.2rem}
+.place b{font-size:1.25rem}
+.photo{width:100%;height:auto;max-height:260px;object-fit:cover;border-radius:14px;display:block}
+.pending{color:var(--muted);font-style:italic}
+.actions{padding:1.5rem;display:flex;flex-direction:column;gap:.9rem;margin-top:auto}
+.btn{text-decoration:none;border-radius:16px;min-height:64px;display:flex;align-items:center;justify-content:center;text-align:center;padding:.5rem 1rem;font-size:1.35rem;font-weight:700}
+.btn.primary{background:var(--red);color:#fff}
+.btn.ghost{border:2px solid var(--ink);color:var(--ink)}
+.btn.call{background:var(--green);color:#fff;gap:.6rem}
+.check{display:flex;align-items:center;gap:1rem;width:100%;min-height:76px;padding:.9rem 1rem;border-radius:16px;font:inherit;cursor:pointer;text-align:left;background:#fff;border:2px solid #B9ABA4;color:var(--ink);margin-bottom:.75rem}
+.check .box{flex:0 0 36px;width:36px;height:36px;border-radius:10px;border:3px solid var(--muted);display:flex;align-items:center;justify-content:center}
+.check[aria-pressed="true"]{background:var(--green-soft);border-color:var(--green)}
+.check[aria-pressed="true"] .box{background:var(--green);border-color:var(--green)}
+.check[aria-pressed="true"] .lbl{text-decoration:line-through}
+.check .lbl{font-size:1.3rem;font-weight:600;display:block}
+.progress{background:var(--soft);border-radius:14px;padding:.85rem 1.1rem;font-size:1.3rem;font-weight:700;margin-bottom:.9rem}
+.contact{border:2px solid var(--line);border-radius:18px;padding:1.1rem;display:flex;flex-direction:column;gap:.5rem;margin-bottom:1rem}
+.contact.wait{border-style:dashed;border-color:#B9ABA4}
+.contact .role{font-size:1.1rem;color:var(--muted);font-weight:600}
+.contact .name{font-size:1.6rem;font-weight:700}
+.contact .num{font-size:1.85rem;font-weight:700;letter-spacing:.04em;user-select:all}
+footer{padding:1.5rem;border-top:2px solid var(--line);font-size:1rem;color:var(--muted)}
+:focus-visible{outline:4px solid #1A5FB4;outline-offset:3px}
+</style>
+</head>
+<body>
+<div class="wrap" id="app" aria-live="polite"></div>
+<noscript><p style="padding:1.5rem">Trang cần bật JavaScript để hiển thị.</p></noscript>
+<script id="trip" type="application/json">{"days": [{"label": "Thứ 6", "date": "27/11/2026", "summary": "Bay ra Pleiku, tối tiệc nhóm họ", "items": [{"time": "12:00", "title": "Có mặt sân bay Tân Sơn Nhất, nhà ga T3", "detail": "Làm thủ tục và gửi hành lý", "place": ""}, {"time": "14:24", "title": "Máy bay cất cánh", "detail": "Chuyến VN1422 Sài Gòn – Pleiku", "place": ""}, {"time": "16:00", "title": "Đáp sân bay Pleiku", "detail": "Có xe đưa đón về khách sạn nhận phòng và nghỉ ngơi", "place": "Khách sạn Tre Xanh"}, {"time": "17:00–18:00", "title": "Qua nhà gái dùng tiệc nhóm họ", "detail": "", "place": "Nhà gái"}]}, {"label": "Thứ 7", "date": "28/11/2026", "summary": "Lễ vu quy, tiệc cưới", "items": [{"time": "05:00–07:00", "title": "Trang điểm", "detail": "Bên make up qua trang điểm cho mẹ và các cô bác nhà trai", "place": ""}, {"time": "08:00", "title": "Qua nhà gái làm lễ vu quy", "detail": "Lễ khoảng 2 tiếng – 2 tiếng 30", "place": "Nhà gái"}, {"time": "11:00", "title": "Tiệc cưới ở nhà hàng", "detail": "Sảnh Queen, tầng 1", "place": "Nhà hàng Century"}, {"time": "Chiều", "title": "Về khách sạn nghỉ ngơi", "detail": "Cả nhà sinh hoạt tự do", "place": "Khách sạn Tre Xanh"}, {"time": "17:00–18:00", "title": "Tiệc thân mật hai gia đình", "detail": "Có xe đưa cả nhà vào nhà vườn", "place": "Nhà vườn"}]}, {"label": "Chủ nhật", "date": "29/11/2026", "summary": "Trả phòng, bay về Sài Gòn", "items": [{"time": "Buổi sáng", "title": "Thu dọn hành lý, trả phòng", "detail": "Giờ trả phòng: cập nhật sau", "place": "Khách sạn Tre Xanh"}, {"time": "cập nhật sau", "title": "Xe đưa cả nhà ra sân bay Pleiku", "detail": "", "place": ""}, {"time": "16:10", "title": "Máy bay cất cánh về Sài Gòn", "detail": "Chuyến VN1423 Pleiku – Tân Sơn Nhất (nhà ga T3)", "place": ""}]}], "flights": [{"date": "27/11/2026", "code": "VN1422", "from": "Tân Sơn Nhất (nhà ga T3)", "to": "Pleiku", "depart": "14:24", "checkin": "12:00"}, {"date": "29/11/2026", "code": "VN1423", "from": "Pleiku", "to": "Tân Sơn Nhất (nhà ga T3)", "depart": "16:10", "checkin": "14:00"}], "places": {"Khách sạn Tre Xanh": {"address": "18 Lê Lai, Phường Tây Sơn, Thành phố Pleiku, Gia Lai", "note": "Đối diện Chợ đêm Pleiku"}, "Nhà gái": {"address": "64 Cù Chính Lan, Phường Diên Hồng", "note": ""}, "Nhà hàng Century": {"address": "170 đường Wừu, phường Pleiku, Gia Lai", "note": "Sảnh Queen, tầng 1"}, "Nhà vườn": {"address": "124 Trần Xuân Soạn, Phường Diên Hồng", "note": ""}}, "contacts": [{"name": "Kim Trọng", "role": "Người lo chung cả chuyến", "phone": "0903822904"}, {"name": "Kim Thuận", "role": "Người lo chung cả chuyến", "phone": "0969270285"}, {"name": "Tài xế 1", "role": "Tài xế", "phone": ""}, {"name": "Tài xế 2", "role": "Tài xế", "phone": ""}], "packing": [{"item": "CCCD / giấy tờ tùy thân", "note": "Bắt buộc để lên máy bay"}, {"item": "Áo khoác", "note": "Pleiku 19–26°C, có gió"}, {"item": "Quần áo dự lễ, dự tiệc", "note": "Lễ vu quy và tiệc cưới Thứ 7"}, {"item": "Giày dép đi lại thoải mái", "note": ""}, {"item": "Thuốc uống hằng ngày", "note": "Mang đủ cho 3 ngày"}, {"item": "Sạc điện thoại", "note": ""}, {"item": "Kính lão / kính mát", "note": ""}], "title": "Pleiku 27–29/11/2026", "start": "27/11/2026", "end": "29/11/2026", "summaries": {"Thứ 6": "Bay ra Pleiku, tối tiệc nhóm họ", "Thứ 7": "Lễ vu quy, tiệc cưới", "Chủ nhật": "Trả phòng, bay về Sài Gòn"}, "weather": {"temp": "19–26°C", "note": "Gió sẽ làm cảm thấy lạnh hơn xíu, nhớ mang áo khoác mỏng"}, "photos": {"Khách sạn Tre Xanh": "assets/hotel.jpg", "Nhà hàng Century": "assets/restaurant.jpg"}, "updated": "11:37, 13/11/2026"}</script>
+<script>
+(function(){
+  var T = JSON.parse(document.getElementById('trip').textContent);
+  var PENDING = /cập nhật sau/i;
+  var store = {
+    get: function(k){ try { return JSON.parse(localStorage.getItem(k)); } catch(e){ return null; } },
+    set: function(k,v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch(e){} }
+  };
+
+  // ---------- helpers ----------
+  function h(tag, attrs){
+    var el = document.createElement(tag);
+    if (attrs) for (var k in attrs){
+      var v = attrs[k]; if (v == null || v === false) continue;
+      if (k === 'class') el.className = v;
+      else if (k === 'text') el.textContent = v;
+      else if (k.slice(0,2) === 'on') el.addEventListener(k.slice(2), v);
+      else el.setAttribute(k, v);
+    }
+    for (var i = 2; i < arguments.length; i++){
+      var c = arguments[i]; if (c == null || c === false) continue;
+      if (Array.isArray(c)) c.forEach(function(x){ if (x != null && x !== false) el.appendChild(typeof x === 'string' ? document.createTextNode(x) : x); });
+      else el.appendChild(typeof c === 'string' ? document.createTextNode(c) : c);
+    }
+    return el;
+  }
+  // chữ có "cập nhật sau" -> hiện "Sẽ cập nhật sau" màu xám
+  function txt(s, tag, cls){
+    tag = tag || 'span';
+    if (!s) return null;
+    if (PENDING.test(s)){
+      var t = s.trim().toLowerCase() === 'cập nhật sau' ? 'Sẽ cập nhật sau' : s.replace(/cập nhật sau/i, 'sẽ cập nhật sau');
+      return h(tag, {class: (cls ? cls + ' ' : '') + 'pending', text: t});
+    }
+    return h(tag, {class: cls, text: s});
+  }
+  var SVG = 'http://www.w3.org/2000/svg';
+  function icon(path, size, color){
+    var s = document.createElementNS(SVG, 'svg');
+    s.setAttribute('width', size || 28); s.setAttribute('height', size || 28); s.setAttribute('viewBox', '0 0 24 24');
+    s.setAttribute('fill', 'none'); s.setAttribute('stroke', color || 'currentColor'); s.setAttribute('stroke-width', '2.4');
+    s.setAttribute('stroke-linecap', 'round'); s.setAttribute('stroke-linejoin', 'round'); s.setAttribute('aria-hidden', 'true');
+    s.innerHTML = path; return s;
+  }
+  var I = {
+    next: '<path d="M9 6l6 6-6 6"/>', back: '<path d="M15 6l-6 6 6 6"/>',
+    plane: '<path d="M2.5 13.5l19-7-5 15-3.5-6.5z"/><path d="M13 15l3.5-5"/>',
+    list: '<rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M8.5 12l2 2 4-4"/>',
+    phone: '<path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/>',
+    tick: '<path d="M5 12.5l4.5 4.5L19 7.5"/>'
+  };
+  function parseDate(s){ var p = s.split('/'); return new Date(+p[2], +p[1]-1, +p[0]); }
+  function todayVN(){
+    var p = new Intl.DateTimeFormat('en-GB', {timeZone:'Asia/Ho_Chi_Minh', year:'numeric', month:'2-digit', day:'2-digit'}).format(new Date()).split('/');
+    return new Date(+p[2], +p[1]-1, +p[0]);
+  }
+  function dayId(d){ return 'ngay-' + d.date.split('/')[0]; }
+  function shortDate(d){ var p = d.date.split('/'); return p[0] + '/' + p[1]; }
+  function fmtPhone(n){ return n.length === 10 ? n.slice(0,4) + ' ' + n.slice(4,7) + ' ' + n.slice(7) : n; }
+  // mỗi ảnh chỉ hiện ở lần đầu địa điểm xuất hiện
+  (function(){
+    var seen = {};
+    T.days.forEach(function(d){ d.items.forEach(function(it){
+      if (it.place && T.photos[it.place] && !seen[it.place]){ seen[it.place] = true; it.showPhoto = true; }
+    }); });
+  })();
+  // thêm mục "Có mặt sân bay" nếu ngày có chuyến bay mà lịch chưa ghi
+  T.days.forEach(function(d){
+    T.flights.forEach(function(f){
+      if (f.date !== d.date || !f.checkin) return;
+      var has = d.items.some(function(i){ return i.time === f.checkin; });
+      if (has) return;
+      var idx = d.items.findIndex(function(i){ return i.time === f.depart; });
+      var item = {time: f.checkin, title: 'Có mặt sân bay ' + f.from, detail: 'Làm thủ tục và gửi hành lý.', place: ''};
+      if (idx >= 0) d.items.splice(idx, 0, item); else d.items.push(item);
+    });
+  });
+
+  var big = !!store.get('chu-to');
+  function applyBig(){ document.documentElement.classList.toggle('big', big); }
+  applyBig();
+  function bigBtn(){
+    return h('button', {type:'button', class:'btn-a', 'aria-pressed': big ? 'true' : 'false',
+      onclick: function(){ big = !big; store.set('chu-to', big); applyBig(); render(); }}, big ? 'A− Chữ nhỏ lại' : 'A+ Chữ to');
+  }
+  function backLink(){ return h('a', {class:'back', href:'#trang-chu'}, icon(I.back, 26, '#fff'), 'Trang chủ'); }
+  function footer(){ return h('footer', null, 'Thông tin cập nhật lần cuối: ' + T.updated + '.', h('br'), 'Có thắc mắc, bấm “Gọi điện” ở trang chủ.'); }
+  function homeBtn(){ return h('a', {class:'btn ghost', href:'#trang-chu'}, 'Về trang chủ'); }
+
+  // ---------- trang chủ ----------
+  function countdown(){
+    var start = parseDate(T.start), end = parseDate(T.end), now = todayVN();
+    var diff = Math.round((start - now) / 86400000);
+    if (diff > 1) return h('div', {class:'count'}, 'Còn', h('b', null, String(diff)), 'ngày nữa là đi');
+    if (diff === 1) return h('div', {class:'count'}, h('b', null, 'Ngày mai'), 'là đi rồi');
+    if (now <= end){
+      var n = Math.round((now - start) / 86400000) + 1;
+      return h('div', {class:'count'}, 'Hôm nay là', h('b', null, 'ngày ' + n), 'của chuyến đi');
+    }
+    return h('div', {class:'count'}, 'Chuyến đi đã kết thúc. Cảm ơn cả nhà!');
+  }
+  function weather(){
+    var w = T.weather || {};
+    var rows;
+    if (T.forecast && T.forecast.days && T.forecast.days.length){
+      rows = T.forecast.days.map(function(f){
+        return h('div', {class:'wx-row'},
+          h('span', null, h('b', {style:'display:block'}, f.label), h('span', {class:'small'}, f.desc)),
+          h('span', {class:'wx-temp'}, f.min + '–' + f.max + '°C'));
+      });
+    } else {
+      rows = [h('div', {class:'wx-row'}, h('b', null, 'Nhiệt độ ở Pleiku'), h('span', {class:'wx-temp'}, w.temp || '')),
+              h('span', {class:'small'}, 'Dự báo từng ngày sẽ có khi gần ngày đi.')];
+    }
+    return h('section', null, h('h2', null, 'Thời tiết ở Pleiku'),
+      h('div', {class:'card'}, rows, w.note ? h('div', {class:'note'}, h('b', null, 'Lời dặn: '), w.note) : null,
+        T.forecast && T.forecast.at ? h('span', {class:'small'}, 'Dự báo lấy lúc ' + T.forecast.at) : null));
+  }
+  function home(){
+    var now = todayVN();
+    return [
+      h('header', {class:'top'},
+        h('div', {class:'top-row'}, h('span', {class:'kicker'}, 'LỊCH TRÌNH GIA ĐÌNH'), bigBtn()),
+        h('h1', null, T.title.replace(/–/g, '\u2060–\u2060')), h('p', {class:'sub'}, 'Đi dự đám cưới ở Gia Lai'), countdown()),
+      weather(),
+      h('section', null, h('h2', null, 'Xem lịch từng ngày'),
+        T.days.map(function(d){
+          var isToday = +parseDate(d.date) === +now;
+          return h('a', {class:'daybtn', href:'#' + dayId(d)},
+            h('span', null, h('span', {class:'t'}, d.label + ' – ' + shortDate(d), isToday ? h('span', {class:'today-tag'}, 'Hôm nay') : null),
+              d.summary ? h('span', {class:'d', text: d.summary}) : null),
+            icon(I.next, 32, '#fff'));
+        })),
+      h('section', null, h('div', {class:'grid2'},
+        h('a', {class:'tile', href:'#do-can-mang'}, icon(I.list, 40), 'Đồ cần mang'),
+        h('a', {class:'tile', href:'#goi-dien'}, icon(I.phone, 40), 'Gọi điện'))),
+      h('div', {style:'height:1.5rem'}),
+      footer()
+    ];
+  }
+
+  // ---------- trang ngày ----------
+  function flightCard(f){
+    return h('section', null, h('div', {class:'flight'},
+      h('div', {class:'flight-h'}, icon(I.plane, 30), 'Chuyến bay'),
+      h('dl', {class:'kv'},
+        h('dt', null, 'Số hiệu'), h('dd', {class:'big'}, f.code),
+        h('dt', null, 'Từ'), h('dd', null, f.from),
+        h('dt', null, 'Đến'), h('dd', null, f.to),
+        h('dt', null, 'Có mặt sân bay'), txt(f.checkin, 'dd', 'big'),
+        h('dt', null, 'Giờ bay'), txt(f.depart, 'dd', 'big'))));
+  }
+  function dayPage(i){
+    var d = T.days[i];
+    var flights = T.flights.filter(function(f){ return f.date === d.date; });
+    var next = T.days[i + 1], prev = T.days[i - 1];
+    return [
+      h('header', {class:'top'},
+        h('div', {class:'top-row'}, backLink(), bigBtn()),
+        h('h1', null, d.label + ' – ' + shortDate(d))),
+      flights.map(flightCard),
+      h('section', null, h('h2', null, 'Lịch trong ngày'),
+        h('ol', {class:'tl'}, d.items.map(function(it){
+          var p = it.place && T.places[it.place];
+          return h('li', null,
+            txt(it.time, 'span', 'time'),
+            h('span', {class:'what', text: it.title}),
+            txt(it.detail),
+            p ? h('div', {class:'place'}, h('b', null, it.place), txt(p.address), p.note ? h('span', {text: '(' + p.note + ')'}) : null) : null,
+            it.showPhoto ? h('img', {class:'photo', src: T.photos[it.place], alt: 'Ảnh ' + it.place, loading:'lazy'}) : null);
+        }))),
+      h('div', {class:'actions'},
+        next ? h('a', {class:'btn primary', href:'#' + dayId(next)}, 'Xem ngày ' + next.label + ' – ' + shortDate(next)) :
+          (prev ? h('a', {class:'btn primary', href:'#' + dayId(prev)}, 'Xem lại ngày ' + prev.label + ' – ' + shortDate(prev)) : null),
+        homeBtn())
+    ];
+  }
+
+  // ---------- đồ cần mang ----------
+  function packing(){
+    var done = store.get('da-chuan-bi') || {};
+    var count = T.packing.filter(function(p){ return done[p.item]; }).length;
+    return [
+      h('header', {class:'top'}, h('div', {class:'top-row'}, backLink(), bigBtn()),
+        h('h1', null, 'Đồ cần mang'), h('p', {class:'sub'}, 'Bấm vào từng món để đánh dấu đã chuẩn bị.')),
+      h('section', null,
+        h('div', {class:'progress'}, 'Đã chuẩn bị: ' + count + ' / ' + T.packing.length + ' món'),
+        T.packing.map(function(p){
+          var on = !!done[p.item];
+          return h('button', {type:'button', class:'check', 'aria-pressed': on ? 'true' : 'false',
+              onclick: function(){ done[p.item] = !done[p.item]; store.set('da-chuan-bi', done); render(); }},
+            h('span', {class:'box'}, on ? icon(I.tick, 24, '#fff') : null),
+            h('span', null, h('span', {class:'lbl', text: p.item}), p.note ? h('span', {class:'small', text: p.note}) : null));
+        }),
+        h('p', {class:'small'}, 'Dấu tick chỉ lưu trên điện thoại của bạn.')),
+      h('div', {class:'actions'}, homeBtn())
+    ];
+  }
+
+  // ---------- gọi điện ----------
+  function contacts(){
+    return [
+      h('header', {class:'top'}, h('div', {class:'top-row'}, backLink(), bigBtn()),
+        h('h1', null, 'Gọi điện'), h('p', {class:'sub'}, 'Cần hỏi gì, bấm nút xanh để gọi.')),
+      h('section', null,
+        T.contacts.map(function(c){
+          if (!c.phone) return h('div', {class:'contact wait'}, h('span', {class:'role', text: c.name}), h('span', {class:'pending'}, 'Số điện thoại sẽ cập nhật sau'));
+          return h('div', {class:'contact'},
+            h('span', {class:'role', text: c.role}), h('span', {class:'name', text: c.name}),
+            h('span', {class:'num', text: fmtPhone(c.phone)}),
+            h('a', {class:'btn call', href:'tel:' + c.phone}, icon(I.phone, 26, '#fff'), 'Gọi ' + c.name));
+        }),
+        h('p', {class:'small'}, 'Nếu nút không gọi được, hãy bấm giữ vào số điện thoại ở trên để sao chép, rồi gọi bằng tay.')),
+      h('div', {class:'actions'}, homeBtn())
+    ];
+  }
+
+  // ---------- điều hướng ----------
+  function render(){
+    var id = (location.hash || '').replace('#', '');
+    var app = document.getElementById('app');
+    var view, title = T.title;
+    var di = T.days.findIndex(function(d){ return dayId(d) === id; });
+    if (di >= 0){ view = dayPage(di); title = T.days[di].label + ' – ' + shortDate(T.days[di]); }
+    else if (id === 'do-can-mang'){ view = packing(); title = 'Đồ cần mang'; }
+    else if (id === 'goi-dien'){ view = contacts(); title = 'Gọi điện'; }
+    else view = home();
+    app.textContent = '';
+    [].concat(view).forEach(function(n){ if (Array.isArray(n)) n.forEach(function(x){ x && app.appendChild(x); }); else if (n) app.appendChild(n); });
+    document.title = title === T.title ? T.title : title + ' · ' + T.title;
+  }
+  var lastHash = location.hash;
+  window.addEventListener('hashchange', function(){ if (location.hash !== lastHash){ lastHash = location.hash; render(); window.scrollTo(0, 0); } });
+  render();
+})();
+</script>
+</body>
+</html>
